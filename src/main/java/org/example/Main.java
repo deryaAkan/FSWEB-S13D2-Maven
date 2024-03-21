@@ -10,7 +10,7 @@ public class Main {
 
     }
     public static boolean isPalindrome(int number) {
-        String numString =String.valueOf(Math.abs(number));;
+        String numString =String.valueOf(Math.abs(number));
         char[] digits = numString.toCharArray();
 
         for (int i = 0, j=digits.length-1; i<j ; i++,j--){
@@ -49,38 +49,38 @@ public class Main {
         else {
             String numString =String.valueOf(number);
             char[] digits = numString.toCharArray();
-            String text = "";
+            StringBuilder text = new StringBuilder();
             for (char i : digits) {
                 switch (i) {
                     case '0' :
-                        text = text + "Zero ";
+                        text.append("Zero ");
                         break;
                     case '1' :
-                        text = text + "One ";
+                        text.append("One ");
                         break;
                     case '2' :
-                        text = text + "Two ";
+                        text.append("Two ");
                         break;
                     case '3' :
-                        text = text + "Three ";
+                        text.append("Three ");
                         break;
                     case '4' :
-                        text = text + "Four ";
+                        text.append("Four ");
                         break;
                     case '5':
-                        text = text + "Five ";
+                        text.append("Five ");
                         break;
                     case '6':
-                        text = text + "Six ";
+                        text.append("Six ");
                         break;
                     case '7':
-                        text = text + "Seven ";
+                        text.append("Seven ");
                         break;
                     case '8' :
-                        text = text + "Eight ";
+                        text.append("Eight ");
                         break;
                     case '9' :
-                        text = text + "Nine ";
+                        text.append("Nine ");
                         break;
                     default:
                         break;
@@ -88,8 +88,8 @@ public class Main {
                 }
             }
 
-            System.out.println(text.trim());
-            return  text.trim();
+            System.out.println(text.toString().trim());
+            return  text.toString().trim();
 
         }
     }
